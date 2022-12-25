@@ -9,9 +9,10 @@ void main() {
     deMaior = true;
   } else {
     deMaior = false;
-  }
-  
+  }  
   String frase = 'Eu sou ${name}, tenho ${age} anos. Eu tenho mais de 18 anos? ${deMaior}';
+
+  for(int i=0; i<5; i++){}
 
   print(frase);
 }
