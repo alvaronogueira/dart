@@ -33,8 +33,14 @@ void main() {
       'Eu tenho  ${age = 420} anos e tenho ${alvinho[3]} de altura.\n'
       'Seria eu Geek? $geek';
 
-  print(frase);
-
   // Lista dinâmica 2 //
   List<dynamic> aleatorio = [age, initial, nickname, high, name];
+
+  // Lista com média de notas //
+  List<dynamic> medAna = ['Ana', 'UFBA', 8.75];
+  List<dynamic> medAbreu = ['Abreu', 7.3, 'UERJ'];
+  List<dynamic> medBruce = [9.9, 'Bruce', 'UFPel'];
+
+  double media = (medAna[2] + medAbreu[1] + medBruce[0]) / 3;
+  print(media);
 }
