@@ -22,6 +22,9 @@ void main() {
     diasColhida =
         'Meu amigo, ela foi colhida há $diasPlantio dias. Isso é pouco tempo! ';
   }
-
   print(diasColhida);
+
+
+
 }
+
