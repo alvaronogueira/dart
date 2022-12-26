@@ -13,15 +13,15 @@ void main() {
     deMaior = false;
   }
 
-  String frase = 'Eu sou ${name}, tenho ${age} anos. Eu tenho mais de 18 anos? ${deMaior}';
+  String frase =
+      'Eu sou ${name}, tenho ${age} anos. Eu tenho mais de 18 anos? ${deMaior}';
 
-  for(int i=1; i<=10; i++){
+  for (int i = 1; i <= 10; i++) {
     print('Concluí $i voltas');
   }
 
-  while(energia>20){
+  while (energia > 20) {
     print('Mais uma repetição');
     energia = energia - 10;
   }
-
 }
