@@ -68,7 +68,7 @@ void main() {
     }
     print('A contagem está em $contar');
   }
-  print('Agora está fora de contagem');*/
+  print('Agora está fora de contagem');
 
   for (int i = 1; i <= 10; ++i) {
     if (i == 2) {
@@ -76,5 +76,32 @@ void main() {
       continue;
     }
     print("Agora, você está fora da visão no loop $i");
+  }*/
+
+  var nota = "C";
+
+  switch (nota) {
+    case "A":
+      {
+        print('TOP DEMAIS');
+      }
+      break;
+
+    case "B":
+      {
+        print('Nada mal');
+      }
+      break;
+
+    case "C":
+      {
+        print('Pode melhorar....');
+      }
+      break;
+
+    default:
+      {
+        print('Isso não é uma opção.');
+      }
   }
 }
