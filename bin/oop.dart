@@ -1,5 +1,3 @@
-import 'dart:mirrors';
-
 void main() {
   // Paradigma Oriantação Objeto //
 
@@ -9,8 +7,10 @@ void main() {
   String sabor = 'azeda';
   String diasColhida = '';
   int diasPlantio = 30;
-  bool isMadura;
-
+  bool isMadura = funcEstaMadura(diasPlantio);
+  
+  mostarMadura('graviola', 18, cor: 'verde musgo.');
+  /*
   if (diasPlantio >= 30) {
     isMadura = true;
   } else {
@@ -22,9 +22,24 @@ void main() {
     diasColhida =
         'Meu amigo, ela foi colhida há $diasPlantio dias. Isso é pouco tempo! ';
   }
-  print(diasColhida);
-
-
-
+  print(diasColhida); */
 }
 
+mostarMadura(String nome, int dias, {required String cor}) {
+  if (dias >= 30) {
+    print('A $nome está madura!');
+  } else {
+    print('A $nome não está madura...');
+  }
+  if (cor != null) {
+    print("A $nome é $cor");
+  }
+}
+
+bool funcEstaMadura(int dias) {
+  if (dias >= 30) {
+    return true;
+  } else {
+    return false;
+  }
+}
