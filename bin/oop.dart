@@ -44,24 +44,24 @@ bool funcEstaMadura(int dias) {
   } 
   */
 
-  String toString(
-    {required String nome,
-    required double peso,
-    required diasDesdeColheita,
-    int diasParaMadura = 30,
-    bool? isMadura}) {
-      if (isMadura == null) {
-        isMadura = diasDesdeColheita >= diasParaMadura;
-      }
-  
-    String maduraString = "";
-      if (isMadura != null && !isMadura) {
-        maduraString = "não ";
-      }
-
-    String frase =
-        "A $nome pesa $peso gramas! Ela foi colhida há $diasDesdeColheita dias e precisa de $diasParaMadura dias para amadurecer, logo, a $nome está $isMadura";
-
-    return frase;
+  String nome = 'Laranja';
+  int peso = 98;
+  int diasDesdeColheita = 20;
+  int diasParaMadura = 29;
+  bool isMadura;
+  if (diasDesdeColheita >= diasParaMadura) {
+    isMadura = true;
+  } else {
+    isMadura = false;
   }
+  if (isMadura == true) {
+    print('Está madura.');
+  } else {
+    print('Não está madura.');
+  }
+
+  String frase =
+      "A $nome pesa $peso gramas! Ela foi colhida há $diasDesdeColheita dias e precisa de $diasParaMadura dias para amadurecer, logo, $isMadura.";
+
+  print(frase);
 }
