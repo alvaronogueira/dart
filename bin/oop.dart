@@ -1,10 +1,13 @@
-void main() {
+/* void main() {
   // Paradigma Oriantação Objeto //
-  /*
+  
   String nome = 'Laranja';
   double peso = 0.8;
   String cor = 'esverdeada';
   String sabor = 'azeda';
+
+
+  
   String diasColhida = '';
   int diasPlantio = 30;
   bool isMadura = funcEstaMadura(diasPlantio);
@@ -42,7 +45,7 @@ bool funcEstaMadura(int dias) {
   } else {
     return false;
   } 
-  */
+  
 
   String nome = 'Laranja';
   int peso = 98;
@@ -64,4 +67,37 @@ bool funcEstaMadura(int dias) {
       "A $nome pesa $peso gramas! Ela foi colhida há $diasDesdeColheita dias e precisa de $diasParaMadura dias para amadurecer, logo, $isMadura.";
 
   print(frase);
+}
+*/
+
+// Classe, Propriedade e Construtor //
+
+void main() {
+  String nome = 'Laranja';
+  double peso = 0.8;
+  String cor = 'verde';
+  String sabor = 'doce';
+  int diasColhida = 27;
+  bool isMadura = true;
+
+  Fruta fruta01 = Fruta(nome, peso, cor, sabor, diasColhida);
+  Fruta fruta02 = Fruta(nome, peso, cor, sabor, diasColhida);
+  Fruta fruta03 = Fruta("jambo", 0.9, 'vermelho', "agridoce", 7);
+
+  print(fruta01.diasColhida);
+  print(fruta01);
+
+  print(fruta03.nome); 
+}
+
+class Fruta {
+  String nome;
+  double peso;
+  String cor;
+  String sabor;
+  int diasColhida;
+  bool? isMadura;
+
+  Fruta(this.nome, this.peso, this.cor, this.sabor, this.diasColhida,
+      {this.isMadura});
 }
