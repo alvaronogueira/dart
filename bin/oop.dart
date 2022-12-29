@@ -88,10 +88,25 @@ void main() {
   print(fruta01.diasColhida);
   print(fruta01);
   print(fruta03.nome);
-  */
 
   fruta01.estaMadura(11);
   fruta03.estaMadura(7);
+   */
+
+  Legumes mandioca1 = Legumes('macaxeira', 1099, 'marrom', true);
+  Fruta siriguela = Fruta('siriguela', 15, 'amarelo', 'doce', 12);
+  Nozes macadamia1 = Nozes('macadamia1', 9, 'branco amarelado', 'doce', 12, 47);
+  citricos limao = citricos('limão', 86, 'verde', 'bem azedo', 5, true, 8.9);
+
+  mandioca1.printAlimento();
+  siriguela.printAlimento();
+  macadamia1.printAlimento();
+  limao.printAlimento();
+
+  mandioca1.cozinhar();
+  // mandioca1.preparandoMeuSuco(); //não funciona
+  //limao.cozinhar(); //não funciona    
+  limao.preparandoMeuSuco();
 }
 
 class Fruta extends Alimento {
@@ -129,7 +144,11 @@ class Alimento {
 class Legumes extends Alimento {
   bool isPrecisaCozinhar;
   Legumes(String nome, double peso, String cor, this.isPrecisaCozinhar)
-      : super(nome, peso, cor);
+      : super(
+          nome,
+          peso,
+          cor,
+        );
 
   void cozinhar() {
     if (isPrecisaCozinhar) {
@@ -160,7 +179,6 @@ class Nozes extends Fruta {
   double porcentagemOleoNatural;
 
   Nozes(String nome, double peso, String cor, String sabor,
-    int diasDesdeColheita,
-    this.porcentagemOleoNatural) 
-    : super(nome, peso, cor, sabor, diasDesdeColheita);
+      int diasDesdeColheita, this.porcentagemOleoNatural)
+      : super(nome, peso, cor, sabor, diasDesdeColheita);
 }
