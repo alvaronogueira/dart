@@ -84,10 +84,14 @@ void main() {
   Fruta fruta02 = Fruta(nome, peso, cor, sabor, diasColhida);
   Fruta fruta03 = Fruta("jambo", 0.9, 'vermelho', "agridoce", 7);
 
+  /*
   print(fruta01.diasColhida);
   print(fruta01);
+  print(fruta03.nome);
+  */
 
-  print(fruta03.nome); 
+  fruta01.estaMadura(11);
+  fruta03.estaMadura(7);
 }
 
 class Fruta {
@@ -100,4 +104,10 @@ class Fruta {
 
   Fruta(this.nome, this.peso, this.cor, this.sabor, this.diasColhida,
       {this.isMadura});
+
+  estaMadura(int diasParaMadura) {
+    isMadura = diasParaMadura >= diasColhida;
+    print(
+        'A $nome foi colhida há 25 dias atrás, mas precisa de $diasColhida dias para ser degustada. Ela está madura? $isMadura');
+  }
 }
