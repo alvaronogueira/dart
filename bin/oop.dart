@@ -111,3 +111,44 @@ class Fruta {
         'A $nome foi colhida há 25 dias atrás, mas precisa de $diasColhida dias para ser degustada. Ela está madura? $isMadura');
   }
 }
+
+class Alimento {
+  String nome;
+  double peso;
+  String cor;
+  Alimento(this.nome, this.peso, this.cor);
+
+  void printAlimento() {
+    print('Este(a) $nome pesa $peso gramas e é $cor');
+  }
+}
+
+class Legumes extends Alimento {
+  bool isPrecisaCozinhar;
+  Legumes(String nome, double peso, String cor, this.isPrecisaCozinhar) 
+    : super(nome, peso,cor);
+}
+
+class citricos {
+  String nome;
+  double peso;
+  String cor;
+  int diasDesdeColheita;
+  bool? isMadura;
+  double nivelAzedo;
+
+  citricos(this.nome, this.peso, this.cor, this.diasDesdeColheita,
+      this.isMadura, this.nivelAzedo);
+}
+
+class Nozes {
+  String nome;
+  double peso;
+  String cor;
+  int diasDesdeColheita;
+  bool? isMadura;
+  double porcentagemOleoNatural;
+
+  Nozes(this.nome, this.peso, this.cor, this.diasDesdeColheita, this.isMadura,
+      this.porcentagemOleoNatural);
+}
