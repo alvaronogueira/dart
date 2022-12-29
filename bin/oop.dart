@@ -99,7 +99,8 @@ class Fruta extends Alimento {
   int diasDesdeColheita;
   bool? isMadura;
 
-  Fruta(String nome, double peso, String cor, this.sabor, this.diasDesdeColheita,
+  Fruta(
+      String nome, double peso, String cor, this.sabor, this.diasDesdeColheita,
       {this.isMadura})
       : super(nome, peso, cor);
 
@@ -142,18 +143,24 @@ class Legumes extends Alimento {
 class citricos extends Fruta {
   double nivelAzedo;
 
-  citricos(String nome, double peso, String cor, String sabor, int diasDesdeColheita,
-      bool isMadura, this.nivelAzedo) : super(nome, peso, cor, sabor, diasDesdeColheita);
+  citricos(String nome, double peso, String cor, String sabor,
+      int diasDesdeColheita, bool isMadura, this.nivelAzedo)
+      : super(nome, peso, cor, sabor, diasDesdeColheita);
+
+  void existeRefri(bool tem) {
+    if (tem) {
+      print('Nós temos o refrigerante $nome');
+    } else {
+      print('Não temos o refrigerante $nome');
+    }
+  }
 }
 
-class Nozes {
-  String nome;
-  double peso;
-  String cor;
-  int diasDesdeColheita;
-  bool? isMadura;
+class Nozes extends Fruta {
   double porcentagemOleoNatural;
 
-  Nozes(this.nome, this.peso, this.cor, this.diasDesdeColheita, this.isMadura,
-      this.porcentagemOleoNatural);
+  Nozes(String nome, double peso, String cor, String sabor,
+    int diasDesdeColheita,
+    this.porcentagemOleoNatural) 
+    : super(nome, peso, cor, sabor, diasDesdeColheita);
 }
