@@ -1,6 +1,6 @@
 void main() {
-  //escolherMeioTransporteEnum(Transporte.patins);
-  contasBancariasEnum(Conta.investimentos);
+  escolherMeioTransporteEnum(Transporte.patins);
+  //contasBancariasEnum(Conta.investimentos);
 }
 
 void escolherMeioTransporte(int locomocao) {
