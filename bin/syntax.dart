@@ -1,9 +1,23 @@
 void main() {
-  escolherMeioTransporteEnum(Transporte.patins);
+  //escolherMeioTransporte(Transporte.patins);
   //contasBancariasEnum(Conta.investimentos);
+
+  /*List<dynamic> destinos = [];
+  String destino = 'Rio de Janeiro';
+  destinos.add(destino);
+  destinos.add(destino);
+  destinos.add(destino);*/
+
+  print(registrarDestinos('Salvador'));
 }
 
-void escolherMeioTransporte(int locomocao) {
+registrarDestinos(String destino) {
+  Set<String> registrosVisitados = <String>{};
+  registrosVisitados.add(destino);
+  return registrosVisitados;
+}
+
+/*void escolherMeioTransporte(int locomocao) {
   if (locomocao == 0) {
     print('Vou de CARRO para a aventura!');
   } else if (locomocao == 1) {
@@ -11,9 +25,9 @@ void escolherMeioTransporte(int locomocao) {
   } else {
     print('Vou para a aventura de pé mesmo');
   }
-}
+}*/
 
-void escolherMeioTransporteEnum(Transporte locomocao) {
+void escolherMeioTransporte(Transporte locomocao) {
   //if (locomocao == Transporte.carro) {
   //  print('Vou de CARRO para a aventura!');
   //} else if (locomocao == Transporte.bike) {
