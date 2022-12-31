@@ -1,20 +1,33 @@
 void main() {
   //escolherMeioTransporte(Transporte.patins);
   //contasBancariasEnum(Conta.investimentos);
+  Set<String> registrosVisitados = <String>{};
+  registrosVisitados = registrarDestinos('Salvador', registrosVisitados);
+  
+  //registrosVisitados = registrarDestinos('Aracajivs', registrosVisitados);
+  //registrosVisitados =
+  //  registrarDestinos('Patativa do Norte', registrosVisitados);
+  //registrosVisitados = registrarDestinos('Ananindeua', registrosVisitados);
+  //registrosVisitados =
+  //  registrarDestinos('Patativa do Norte', registrosVisitados);
 
+  //print(registrosVisitados);
+  //print(registrosVisitados.first);
+  //print(registrosVisitados.last);
+  //print(registrosVisitados.isNotEmpty);
+
+  //print(registrosVisitados.contains('Salvador'));
+  //print(registrosVisitados.contains('Belo Horizonte'));
   /*List<dynamic> destinos = [];
   String destino = 'Rio de Janeiro';
   destinos.add(destino);
   destinos.add(destino);
   destinos.add(destino);*/
-
-  print(registrarDestinos('Salvador'));
 }
 
-registrarDestinos(String destino) {
-  Set<String> registrosVisitados = <String>{};
-  registrosVisitados.add(destino);
-  return registrosVisitados;
+Set<String> registrarDestinos(String destino, Set<String> banco) {
+  banco.add(destino);
+  return banco;
 }
 
 /*void escolherMeioTransporte(int locomocao) {
