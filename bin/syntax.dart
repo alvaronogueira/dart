@@ -1,7 +1,7 @@
 
 
 
-void main() {
+/*void main() {
   //escolherMeioTransporte(Transporte.patins);
   //contasBancariasEnum(Conta.investimentos);
   //Set<String> registrosVisitados = <String>{};
@@ -31,22 +31,22 @@ void main() {
   destinos.add(destino);
   destinos.add(destino);*/
 
-  /*Map<String, dynamic> registrarPrecos = {};
-  registrarPrecos["Salvador"] = 846.9;
-  registrarPrecos["Manaus"] = 2746.03;
-  registrarPrecos["Curitiba"] = 251;
-  registrarPrecos["Salvador"] = 919;
-  registrarPrecos.remove("Curitiba");
-  registrarPrecos["Brasília"] = "CARO DEMAIS!";
+  //Map<String, dynamic> registrarPrecos = {};
+  //registrarPrecos["Salvador"] = 846.9;
+  //registrarPrecos["Manaus"] = 2746.03;
+  //registrarPrecos["Curitiba"] = 251;
+  //registrarPrecos["Salvador"] = 919;
+  //registrarPrecos.remove("Curitiba");
+  //registrarPrecos["Brasília"] = "CARO DEMAIS!";
 
-  print(registrarPrecos);*/
-}
+  //print(registrarPrecos);
+}*/
 
 
-Set<String> registrarDestinos(String destino, Set<String> banco) {
+/*Set<String> registrarDestinos(String destino, Set<String> banco) {
   banco.add(destino);
   return banco;
-}
+}*/
 
 /*void escolherMeioTransporte(int locomocao) {
   if (locomocao == 0) {
