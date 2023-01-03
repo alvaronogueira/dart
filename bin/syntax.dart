@@ -1,9 +1,16 @@
+
+
+
 void main() {
   //escolherMeioTransporte(Transporte.patins);
   //contasBancariasEnum(Conta.investimentos);
-  Set<String> registrosVisitados = <String>{};
-  registrosVisitados = registrarDestinos('Salvador', registrosVisitados);
+  //Set<String> registrosVisitados = <String>{};
+  //registrosVisitados = registrarDestinos('Salvador', registrosVisitados);
+
   
+  //Pessoa pessoa = Pessoa("Super Sayajin", 21, true);
+  //print(pessoa.toMap());
+
   //registrosVisitados = registrarDestinos('Aracajivs', registrosVisitados);
   //registrosVisitados =
   //  registrarDestinos('Patativa do Norte', registrosVisitados);
@@ -23,7 +30,18 @@ void main() {
   destinos.add(destino);
   destinos.add(destino);
   destinos.add(destino);*/
+
+  /*Map<String, dynamic> registrarPrecos = {};
+  registrarPrecos["Salvador"] = 846.9;
+  registrarPrecos["Manaus"] = 2746.03;
+  registrarPrecos["Curitiba"] = 251;
+  registrarPrecos["Salvador"] = 919;
+  registrarPrecos.remove("Curitiba");
+  registrarPrecos["Brasília"] = "CARO DEMAIS!";
+
+  print(registrarPrecos);*/
 }
+
 
 Set<String> registrarDestinos(String destino, Set<String> banco) {
   banco.add(destino);
@@ -40,6 +58,7 @@ Set<String> registrarDestinos(String destino, Set<String> banco) {
   }
 }*/
 
+/*
 void escolherMeioTransporte(Transporte locomocao) {
   //if (locomocao == Transporte.carro) {
   //  print('Vou de CARRO para a aventura!');
@@ -58,31 +77,9 @@ void escolherMeioTransporte(Transporte locomocao) {
   //} else {
   //  print('Eu acho que vou ficar em casam mesmo. Sem idade para aventuras!');
   //}
+}*/
 
-  switch (locomocao) {
-    case Transporte.carro:
-      print('Vou de CARRO para a aventura!');
-      break;
-    case Transporte.bike:
-      print('Vou de BIKE para a aventura');
-      break;
-    case Transporte.andando:
-      print('Vou de PÉ para a aventura');
-      break;
-    case Transporte.aviao:
-      print('Vou de AVIÃO para a aventura');
-      break;
-    case Transporte.trem:
-      print('Vou de TREM para a aventura');
-      break;
-    default:
-      print('Eu vou é ficar em casa mesmo. Sem idade para aventuras!');
-      break;
-  }
-}
-
-enum Transporte { carro, bike, andando, skate, aviao, patins, trem }
-
+/*
 void contasBancariasEnum(Conta contaTipo) {
   switch (contaTipo) {
     case Conta.salario:
@@ -104,3 +101,21 @@ void contasBancariasEnum(Conta contaTipo) {
 }
 
 enum Conta { salario, poupanca, corrente, investimentos }
+*/
+
+/*
+class Pessoa {
+  String nome;
+  int idade;
+  bool estaAutenticada;
+
+  Pessoa(this.nome, this.idade, this.estaAutenticada);
+
+  Map<String, dynamic> toMap(){
+    return{
+      "nome": this.nome,
+      "idade": this.idade,
+      "bool": this.estaAutenticada,
+    };
+  }
+} */
