@@ -7,7 +7,7 @@ class Viagem{
   Set<String> registrosVisitados = <String>{};
   Map<String, dynamic> registrarPrecos = {};
 
-  int _totalLocaisVisitados = 0;
+  int totalLocaisVisitados = 0;
 
   Viagem({required this.locomocao});
 
