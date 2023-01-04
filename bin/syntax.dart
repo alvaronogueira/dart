@@ -1,5 +1,3 @@
-import 'travel.dart';
-import 'transport.dart';
 
 /*void main() {
   //escolherMeioTransporte(Transporte.patins);
