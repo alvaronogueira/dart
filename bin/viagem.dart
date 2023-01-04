@@ -7,7 +7,7 @@ class Viagem {
   Set<String> registrosVisitados = <String>{};
   Map<String, dynamic> registrarPrecos = {};
 
-  int totalLocaisVisitados = 0;
+  int _totalLocaisVisitados = 0;
 
   Viagem({required this.locomocao});
 
@@ -21,12 +21,12 @@ class Viagem {
         print('Vou de CARRO para a aventura!');
         break;
       case Transporte.bike:
-      print('Vou de BIKE para a aventura');
-      break;
+        print('Vou de BIKE para a aventura');
+        break;
       case Transporte.andando:
         print('Vou de PÉ para a aventura');
         break;
-      case Transporte.aviao:  
+      case Transporte.aviao:
         print('Vou de AVIÃO para a aventura');
         break;
       case Transporte.trem:
@@ -38,12 +38,15 @@ class Viagem {
     }
   }
 
-  void visitar(String localVisita){
+  void visitar(String localVisita) {
     registrosVisitados.add(localVisita);
   }
 
-  void registrarPrecoVisita (String local, dynamic preco){
+  void registrarPrecoVisita(String local, dynamic preco) {
     registrarPrecos[local] = preco;
   }
 
+  int get consultarLocaisVisitados{
+    return _totalLocaisVisitados;
+  }
 }
