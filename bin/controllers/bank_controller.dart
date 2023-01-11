@@ -1,6 +1,6 @@
 import '../models/account.dart';
 
-class bankController {
+class BankController {
   final Map<String, Account> _database = {};
 
   addAccount({required String id, required Account account}) {
