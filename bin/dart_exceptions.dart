@@ -1,4 +1,4 @@
-/*import 'controllers/bank_controller.dart';
+import 'controllers/bank_controller.dart';
 import 'models/account.dart';
 
 void main() {
@@ -25,45 +25,6 @@ void main() {
 }
 */
 
-import 'dart:_http';
-import 'dart:io';
-
 void main() {
-  print("Started Main");
-  functionOne();
-  print("Finished Main");
-}
-
-void functionOne() {
-  print("Started F01");
-  try {
-    functionTwo();
-  } on FormatException catch (e) {
-    print("Foi capturada dentro da FunctionOne");
-    print(e.message);
-    print(e.source);
-    print(e.toString());
-  } on HttpClient catch (e) {
-    e.toString();
-  } 
-  on IOException catch (e) {
-    print("Uma IOException foi encontrada");
-    e.toString();
-  }
-   on Exception catch (e) {
-    print(e.toString());
-  }
-  print("Finished F01");
-
-  functionTwo();
-  print("Started F02");
-}
-
-void functionTwo() {
-  print("Started F02");
-  for (int i = 1; i <= 5; i++) {
-    print(i);
-    double amount = double.parse("Not a number");
-  }
-  print("Finished F02");
+  throw FormatException();
 }
