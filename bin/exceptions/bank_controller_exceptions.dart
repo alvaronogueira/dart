@@ -15,8 +15,6 @@ class SenderNotAuthenticatedException implements Exception {
 
 class SenderBalanceLowerThanAmountException implements Exception {
   String idSender;
-  double senderBalance; 
+  double senderBalance;
   double amount;
-
-  
 }

@@ -26,9 +26,12 @@ void main() {
     print(result);
   } on SenderIdInvalidException catch (e) {
     print("O ID remetente '${e.idSender}' não é válido");
+
   } on ReceiverIdInvalidException catch (e) {
     print("O ID remetente '${e.idReceiver}' não é válido");
+
   } on SenderBalanceLowerThanAmountException catch (e) {
     print("O usuário ID remetente '${e.idSender}' não está autenticado ");
+    
   }
 }
