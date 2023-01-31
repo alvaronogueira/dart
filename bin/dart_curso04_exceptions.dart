@@ -15,9 +15,19 @@ void main() {
   bankController.addAccount(
       id: "Digo",
       account:
-          Account(name: "Diego Rosa", balance: 600, isAuthenticated: false));
+          Account(name: "Diego Rosa", balance: 600, isAuthenticated: true));
 
   //Making transfer
+  try{
+    bool result = bankController.makeTransfer(idSender: "eueu", idReceiver: "Elon", amount: 200);
+    //Watching result
+    print(result);
+  } on SenderIdInvalidException catch (e){
+    print("O ID '${e.idSender}' do remetente não é válido");
+  }
+}
+
+/*
   try {
     bool result = bankController.makeTransfer(
         idSender: "Digo", idReceiver: "Elon", amount: 200);
@@ -35,3 +45,4 @@ void main() {
     
   }
 }
+*/
