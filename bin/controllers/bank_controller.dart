@@ -27,7 +27,7 @@ class BankController {
   Account accountReceiver = _database[idReceiver]!;
 
   // Check if Sender is authenticated 
-  if (accountSender.isAuthenticated) {
+  if (!accountSender.isAuthenticated) {
     throw SenderNotAuthenticatedException(idSender: idSender);
   }
   // Check if Receiver has enough value
