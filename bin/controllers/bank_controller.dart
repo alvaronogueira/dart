@@ -21,7 +21,7 @@ class BankController {
     if (!verifyId(idReceiver)) {
       throw ReceiverIdInvalidException(idReceiver: idReceiver);
     }
-  }
+  
 
   Account accountSender = _database[idSender]!;
   Account accountReceiver = _database[idReceiver]!;
@@ -38,7 +38,7 @@ class BankController {
   // If everything has been OK, so make the transfer
   accountSender.balance -= amount;
   accountReceiver.balance += amount;
-  {
+  
   return true;
   }
 

@@ -25,9 +25,9 @@ void main() {
   } on SenderIdInvalidException catch (e){
     print("O ID '${e.idSender}' do remetente não é válido");
   }
-}
 
-/*
+
+
   try {
     bool result = bankController.makeTransfer(
         idSender: "Digo", idReceiver: "Elon", amount: 200);
@@ -45,4 +45,3 @@ void main() {
     
   }
 }
-*/
