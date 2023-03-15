@@ -18,3 +18,4 @@ class SenderBalanceLowerThanAmountException implements Exception {
   double senderBalance;
   double amount;
 }
+
