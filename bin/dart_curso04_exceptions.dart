@@ -17,10 +17,10 @@ void main() {
       account:
           Account(name: "Diego Rosa", balance: 600, isAuthenticated: true));
 
-  //Making transfer
+  //Making transfer 
   try {
     bool result = bankController.makeTransfer(
-        idSender: "uahsuas", idReceiver: "Elon", amount: 500);
+        idSender: "Digo", idReceiver: "Elon", amount: 1500);
 
     //Watching result
     if (result) {
@@ -31,10 +31,13 @@ void main() {
     print("O ID '${e.idSender}' do remetente não é válido.");
     // ignore: dead_code_on_catch_subtype
   } on SenderIdInvalidException catch (e) {
+    print(e);
     print("O ID remetente '${e.idSender}' não é válido.");
   } on ReceiverIdInvalidException catch (e) {
+    print(e);
     print("O ID remetente '${e.idReceiver}' não é válido.");
   } on SenderBalanceLowerThanAmountException catch (e) {
+    print(e);
     print(
         "O usuário ID '${e.idSender}' tentou enviar ${e.amount}, porém o saldo é ${e.senderBalance}.");
   } on Exception {
