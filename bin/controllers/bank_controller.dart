@@ -32,7 +32,11 @@ class BankController {
   }
   // Check if Receiver has enough value
   if (accountSender.balance < amount) {
-    throw SenderBalanceLowerThanAmountException();
+    throw SenderBalanceLowerThanAmountException(
+      idSender: idSender,
+      senderBalance: accountSender.balance,
+      amount: amount,
+    );
   }
 
   // If everything has been OK, so make the transfer

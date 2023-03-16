@@ -17,5 +17,10 @@ class SenderBalanceLowerThanAmountException implements Exception {
   String idSender;
   double senderBalance;
   double amount;
-}
 
+  SenderBalanceLowerThanAmountException({
+    required this.idSender,
+    required this.senderBalance,
+    required this.amount,
+  });
+}
