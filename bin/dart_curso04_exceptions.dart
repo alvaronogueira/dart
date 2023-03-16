@@ -27,6 +27,7 @@ void main() {
       print("Transação realizada!");
     }
   } on SenderIdInvalidException catch (e) {
+    print(e);
     print("O ID '${e.idSender}' do remetente não é válido.");
     // ignore: dead_code_on_catch_subtype
   } on SenderIdInvalidException catch (e) {
