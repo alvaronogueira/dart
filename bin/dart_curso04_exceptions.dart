@@ -20,23 +20,23 @@ void main() {
   //Making transfer
   try {
     bool result = bankController.makeTransfer(
-        idSender: "Digo", idReceiver: "Elon", amount: 500);
+        idSender: "uahsuas", idReceiver: "Elon", amount: 500);
 
     //Watching result
     if (result) {
       print("Transação realizada!");
     }
   } on SenderIdInvalidException catch (e) {
-    print("O ID '${e.idSender}' do remetente não é válido");
+    print("O ID '${e.idSender}' do remetente não é válido.");
     // ignore: dead_code_on_catch_subtype
   } on SenderIdInvalidException catch (e) {
-    print("O ID remetente '${e.idSender}' não é válido");
+    print("O ID remetente '${e.idSender}' não é válido.");
   } on ReceiverIdInvalidException catch (e) {
-    print("O ID remetente '${e.idReceiver}' não é válido");
+    print("O ID remetente '${e.idReceiver}' não é válido.");
   } on SenderBalanceLowerThanAmountException catch (e) {
     print(
-        "O usuário ID '${e.idSender}' tentou enviar ${e.amount}, porém o saldo é ${e.senderBalance}");
+        "O usuário ID '${e.idSender}' tentou enviar ${e.amount}, porém o saldo é ${e.senderBalance}.");
   } on Exception {
-    print("Erro de transação");
+    print("Erro na transação");
   }
 }
