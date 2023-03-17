@@ -3,8 +3,12 @@ import 'exceptions/bank_controller_exceptions.dart';
 import 'models/account.dart';
 
 void main() {
+
   //Creating the bank
   BankController bankController = BankController();
+
+  
+  // Account accountTest = Account(name: "", balance: 200, isAuthenticated: true);
 
   //Add account
   bankController.addAccount(
@@ -17,7 +21,7 @@ void main() {
       account:
           Account(name: "Diego Rosa", balance: 600, isAuthenticated: true));
 
-  //Making transfer 
+  //Making transfer
   try {
     bool result = bankController.makeTransfer(
         idSender: "Digo", idReceiver: "Elon", amount: 1500);
