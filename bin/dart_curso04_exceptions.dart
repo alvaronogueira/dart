@@ -3,11 +3,9 @@ import 'exceptions/bank_controller_exceptions.dart';
 import 'models/account.dart';
 
 void main() {
-
   //Creating the bank
   BankController bankController = BankController();
 
-  
   // Account accountTest = Account(name: "", balance: 200, isAuthenticated: true);
 
   //Add account
@@ -48,3 +46,17 @@ void main() {
     print("Erro na transação");
   }
 }
+
+/*void main2() {
+  print("MyString".runtimeType);
+  print(null.runtimeType);
+  Null;
+
+  String naoRolaSerNulo = "MyString";
+  //naoRolaSerNulo = null;
+
+  String? podeSerNulo = "MyString";
+  print(podeSerNulo.runtimeType);
+  podeSerNulo = null;
+  print(podeSerNulo.runtimeType);
+}*/
