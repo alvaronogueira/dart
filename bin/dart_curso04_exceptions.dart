@@ -1,8 +1,25 @@
+import 'dart:math';
+
 import 'controllers/bank_controller.dart';
 import 'exceptions/bank_controller_exceptions.dart';
 import 'models/account.dart';
 
+void testingNullSafety() {
+  Account? myAccount;
+
+  //Simulating external communication
+  Random rng = Random();
+  int randomNumber = rng.nextInt(10);
+  if (randomNumber <= 5) {
+    myAccount = Account(name: "Digo", balance: 251, isAuthenticated: true);
+  }
+
+
+}
+
 void main() {
+  testingNullSafety();
+
   //Creating the bank
   BankController bankController = BankController();
 
