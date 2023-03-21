@@ -14,7 +14,13 @@ void testingNullSafety() {
     myAccount = Account(name: "Digo", balance: 251, isAuthenticated: true);
   }
 
+  //if (myAccount != null) {
+  //  print(myAccount.balance);
+  //} else {
+  //  print("Conta nula");
+  //}
 
+  print(myAccount != null ? myAccount.balance : "Conta nula");
 }
 
 void main() {
